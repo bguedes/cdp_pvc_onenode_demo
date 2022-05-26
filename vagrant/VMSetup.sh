@@ -40,7 +40,7 @@ cd ~
 git clone https://github.com/bguedes/cdp_pvc_onenode_demo
 cd cdp_pvc_onenode_demo
 chmod 777 setup.sh
-sudo ./setup.sh
+sudo ./setup.sh $1 $2 $3
 
 sudo reboot
 
