@@ -189,6 +189,10 @@ chmod -R 777 /opt/cloudera/parcel-cache
 chmod -R 777 /opt/cloudera/csd
 chmod -R 777 /opt/cloudera/parcels
 
+#for issue File "./scripts/create_cluster.py", line 2, in <module>
+rm -rfv /usr/lib/python2.7/site-packages/certifi/*
+pip install certifi==2020.4.5.1
+
 echo "-- Now CM is started and the next step is to automate using the CM API"
 pip install cm_client
 
