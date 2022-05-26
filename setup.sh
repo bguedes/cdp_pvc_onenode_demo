@@ -197,7 +197,7 @@ echo "-- Now CM is started and the next step is to automate using the CM API"
 pip install cm_client
 
 sed -i "s/YourHostname/localhost.localdomain/g" ./scripts/create_cluster.py
-sed -i "s/YourHostname/localhost.localdomain/g" ./templates/$TEMPLATE
+sed -i "s/YourHostname/localhost.localdomain/g" $TEMPLATE
 
 mkdir /data/dfs
 chmod -R 777 /data
