@@ -37,14 +37,10 @@ sudo mkdir data
 echo "Downloading CDP DC Trial Pre Req Install"
 
 cd ~
-git clone https://github.com/bguedes/CDPDCTrial.git
-cd CDPDCTrial
-chmod 777 centosvmCDP.sh
-cd ~
-git clone https://github.com/wangxf2000/OneNodeCDPCluster
-cd OneNodeCDPCluster
+git clone https://github.com/bguedes/cdp_pvc_onenode_demo
+cd cdp_pvc_onenode_demo
 chmod 777 setup.sh
-#sudo ./centosvmCDP.sh
+sudo ./setup.sh
 
 sudo reboot
 
