@@ -1,8 +1,8 @@
 #! /bin/bash
 
-TEMPLATE=$2
-USERNAME=$3
-PASSWORD=$4
+TEMPLATE=$3
+USERNAME=$1
+PASSWORD=$2
 
 echo "-- Configure user cloudera with passwordless and pem file"
 useradd cloudera -d /home/cloudera -p cloudera
