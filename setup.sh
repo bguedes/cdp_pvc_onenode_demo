@@ -109,6 +109,8 @@ mkdir -p /usr/share/java/
 cp ~/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar /usr/share/java/mysql-connector-java.jar
 rm -rf ~/mysql-connector-java-5.1.46*
 
+cd cdp_pvc_onenode_demo
+
 echo "-- Create DBs required by CM"
 mysql -u root < ./scripts/create_db.sql
 
