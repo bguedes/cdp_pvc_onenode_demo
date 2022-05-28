@@ -44,6 +44,11 @@ api_client = cm_client.ApiClient("http://localhost:7180/api/v45")
 
 cm_api = cm_client.ClouderaManagerResourceApi(api_client)
 
+try:
+    cm_api.begin_trial()
+except ApiException as e:
+    print("Exception when calling ClouderaManagerResourceApi->begin_trial: %s\n" % e)
+
 # accept trial licence
 #cm_api.begin_trial()
 
