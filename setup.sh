@@ -151,9 +151,15 @@ CREATE DATABASE ssb_mve OWNER ssb_mve ENCODING 'UTF8';
 EOF
 
 echo "-- Install local parcels repo"
-wget --recursive --no-parent --no-host-directories https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/ -P /var/www/html/cloudera-repos
+wget --recursive https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel -P /var/www/html/cloudera-repos
+wget --recursive https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel.sha1 -P /var/www/html/cloudera-repos
+
 wget --recursive --no-parent --no-host-directories https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/ -P /var/www/html/cloudera-repos
-wget --recursive --no-parent --no-host-directories https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/ -P /var/www/html/cloudera-repos
+
+wget https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel -P /var/www/html/cloudera-repos
+wget https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha1 -P /var/www/html/cloudera-repos
+wget https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha256 -P /var/www/html/cloudera-repos
+
 yum install httpd
 systemctl start httpd
 
