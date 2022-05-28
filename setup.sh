@@ -152,7 +152,7 @@ EOF
 
 echo "-- Install local parcels repo"
 wget --recursive --no-parent --no-host-directories https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/ -P /var/www/html/cloudera-repos
-wget --recursive --no-parent --no-host-directories https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/parcels/ -P /var/www/html/cloudera-repos
+wget --recursive --no-parent --no-host-directories https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/ -P /var/www/html/cloudera-repos
 wget --recursive --no-parent --no-host-directories https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/ -P /var/www/html/cloudera-repos
 yum install httpd
 systemctl start httpd
