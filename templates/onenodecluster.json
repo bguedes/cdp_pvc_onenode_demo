@@ -22,7 +22,7 @@
 			"kudu-KUDU_TSERVER-BASE",
 			"nifi-NIFI_NODE-BASE",
 			"nifiregistry-NIFI_REGISTRY_SERVER-BASE",
-      "schemaregistry-SCHEMA_REGISTRY_SERVER-BASE",
+                        "schemaregistry-SCHEMA_REGISTRY_SERVER-BASE",
 			"spark_on_yarn-GATEWAY-BASE",
 			"spark_on_yarn-SPARK_YARN_HISTORY_SERVER-BASE",
 			"streams_messaging_manager-STREAMS_MESSAGING_MANAGER_SERVER-BASE",
@@ -38,43 +38,45 @@
 	}],
 	"instantiator": {
 		"clusterName": "OneNodeCluster",
-		"hosts": [{
+		"hosts": [
+		{
 			"hostName": "YourHostname",
 			"hostTemplateRefName": "HostTemplate-0-from-YourHostname"
 		}],
 		"lenient": false,
-		"variables": [{
-				"name": "hive-hive_metastore_database_host",
-				"value": "YourHostname"
-			},
-			{
-				"name": "hive-hive_metastore_database_password",
-				"value": "cloudera"
-			},
-			{
-				"name": "hue-database_host",
-				"value": "YourHostname"
-			},
-			{
-				"name": "hue-database_password",
-				"value": "cloudera"
-			},
-			{
-				"name": "hue-database_type",
-				"value": "mysql"
-			},
-			{
-				"name": "kudu-KUDU_MASTER-BASE-fs_data_dirs",
-				"value": "/kudu/mas/dd"
-			},
-			{
-				"name": "kudu-KUDU_MASTER-BASE-fs_wal_dir",
-				"value": "/kudu/mas/wal"
-			},
-			{
-				"name": "kudu-KUDU_TSERVER-BASE-fs_data_dirs",
-				"value": "/kudu/tablet/dd"
-			},
+		"variables": [
+		     {
+			"name": "hive-hive_metastore_database_host",
+			"value": "YourHostname"
+		     },
+		     {
+			"name": "hive-hive_metastore_database_password",
+			"value": "cloudera"
+		     },
+		     {
+			"name": "hue-database_host",
+			"value": "YourHostname"
+		     },
+		     {
+			"name": "hue-database_password",
+			"value": "cloudera"
+		     },
+		     {
+			"name": "hue-database_type",
+			"value": "mysql"
+		     },
+		     {
+			"name": "kudu-KUDU_MASTER-BASE-fs_data_dirs",
+			"value": "/kudu/mas/dd"
+		     },
+		     {
+			"name": "kudu-KUDU_MASTER-BASE-fs_wal_dir",
+			"value": "/kudu/mas/wal"
+		     },
+		     {
+			"name": "kudu-KUDU_TSERVER-BASE-fs_data_dirs",
+			"value": "/kudu/tablet/dd"
+		     },
 			{
 				"name": "kudu-KUDU_TSERVER-BASE-fs_wal_dir",
 				"value": "/kudu/tablet/wal"
@@ -139,9 +141,9 @@
 		}
 	],
 	"repositories": [
-		"https://archive.cloudera.com/p/csa/1.7.0.0/parcels/",
-		"https://archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/",
-		"https://archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/"
+		"http://192.168.1.10/cloudera-repos/p/cdh7/7.1.7.1000/parcels/",
+		"http://192.168.1.10/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/",
+		"http://192.168.1.10/cloudera-repos/p/csa/1.7.0.0/parcels//"
 	],
 	"services": [{
 			"refName": "zookeeper",
