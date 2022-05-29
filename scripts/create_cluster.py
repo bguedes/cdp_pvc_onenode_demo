@@ -85,8 +85,8 @@ mgmt_api.setup_cms(body=api_service)
 cmd = mgmt_api.start_command()
 wait(cmd)
 
-print("Sleeping for 240 seconds")
-time.sleep(240)
+print("Sleeping for 10 seconds")
+time.sleep(10)
 
 # create the cluster using the template
 with open(sys.argv[1]) as f:
