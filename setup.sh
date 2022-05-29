@@ -4,7 +4,7 @@ TEMPLATE=$3
 USERNAME=$1
 PASSWORD=$2
 
-export FQDNx="$(hostname -f)" # There will be an annoying space added to the end. Next command will clear it with xargs
+export FQDNx="$(hostname)" # There will be an annoying space added to the end. Next command will clear it with xargs
 export FQDN=$(echo $FQDNx | xargs)
 
 echo "-- Configure user cloudera with passwordless and pem file"
