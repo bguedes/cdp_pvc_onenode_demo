@@ -11,4 +11,6 @@ Modify
 <change_me_for_username>
 <change_me_for_password>
 
+```
   config.vm.provision "shell", path: "VMSetup.sh", args: "<change_me_for_username> <change_me_for_password> templates/onenodecluster.json"
+  ```
