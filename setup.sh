@@ -151,33 +151,33 @@ CREATE DATABASE ssb_mve OWNER ssb_mve ENCODING 'UTF8';
 EOF
 
 echo "-- Install local parcels repo"
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
 
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/CFM-2.1.4.0-53-el7.parcel -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/CFM-2.1.4.0-53-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/CFM-2.1.4.0-53-el7.parcel -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/CFM-2.1.4.0-53-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
 
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
 
 yum install httpd
 systemctl start httpd
 
 echo "-- Install CSDs for NIFI and NIFI REGISTRY"
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFI-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFIREGISTRY-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFI-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFIREGISTRY-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
 
 echo "-- Install CSAs for Flink and SSB"
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
-wget --progress=bar https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/SQL_STREAM_BUILDER-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/SQL_STREAM_BUILDER-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
 
 chown cloudera-scm:cloudera-scm /opt/cloudera/csd/*
 chmod 644 /opt/cloudera/csd/*
 
-wget --progress=bar https://jdbc.postgresql.org/download/postgresql-42.2.23.jar --no-check-certificate
+wget --progress=bar:force https://jdbc.postgresql.org/download/postgresql-42.2.23.jar --no-check-certificate
 mv postgresql-42.2.23.jar postgresql-connector-java.jar
 cp postgresql-connector-java.jar /usr/share/java
 pip install psycopg2-binary==2.8.5 -t /usr/share/python3
