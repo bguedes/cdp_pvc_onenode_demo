@@ -7,7 +7,7 @@ This github repository will show you how to install a CDP Private Cloud Base usi
 ### Requirements
 
 Your laptop needs at minimum 32GB RAM and at least 100GB disk space. <br />
-An Internet connection is also required, as cdp-deploy will download various files required to perform the automated installation.<br />
+An Internet connection is also required, as this installatin process will download various files required to perform the automated installation.<br />
 
 Please install :
 
