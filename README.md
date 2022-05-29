@@ -1,9 +1,10 @@
 # cdp_pvc_onenode_demo
 Fraud detection demo using CDP Private Cloud Base one node cluster installed using Vagrant
 
-
+```
 wget https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/master/vagrant/VMSetup.sh
 wget https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/master/vagrant/Vagrantfile
+```
 
 Modify 
 
