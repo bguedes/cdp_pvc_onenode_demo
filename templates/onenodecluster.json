@@ -1,6 +1,6 @@
 {
 	"cdhVersion": "7.1.7",
-	"cmVersion": "7.6.2",
+	"cmVersion": "7.6.1",
 	"displayName": "OneNodeCluster",
 	"hostTemplates": [{
 		"cardinality": 1,
