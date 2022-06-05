@@ -173,9 +173,13 @@ echo "-- Install CSDs for NIFI and NIFI REGISTRY"
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFI-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFIREGISTRY-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
 
-echo "-- Install CSAs for Flink and SSB"
+echo "-- Install CSDs for Flink and SSB"
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/SQL_STREAM_BUILDER-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
+
+echo "-- Install CSDs for CDSW
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/csd/CLOUDERA_DATA_SCIENCE_WORKBENCH-CDPDC-1.10.0.jar	 -P /opt/cloudera/csd/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/csd/CLOUDERA_DATA_SCIENCE_WORKBENCH-CDH6-1.10.0.jar -P /opt/cloudera/csd/
 
 chown cloudera-scm:cloudera-scm /opt/cloudera/csd/*
 chmod 644 /opt/cloudera/csd/*
