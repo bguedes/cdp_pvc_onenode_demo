@@ -219,11 +219,11 @@ pip install certifi==2020.4.5.1
 echo "-- Now CM is started and the next step is to automate using the CM API"
 pip install cm_client
 
-#sed -i "s/YourHostname/${FQDN}/g" ./scripts/create_cluster.py
-#sed -i "s/YourHostname/${FQDN}/g" $TEMPLATE
+sed -i "s/YourHostname/${FQDN}/g" ./scripts/create_cluster.py
+sed -i "s/YourHostname/${FQDN}/g" $TEMPLATE
 
-sed -i "s/YourHostname/localhost.localdomain/g" ./scripts/create_cluster.py
-sed -i "s/YourHostname/localhost.localdomain/g" $TEMPLATE
+#sed -i "s/YourHostname/localhost.localdomain/g" ./scripts/create_cluster.py
+#sed -i "s/YourHostname/localhost.localdomain/g" $TEMPLATE
 
 mkdir /data/dfs
 chmod -R 777 /data
