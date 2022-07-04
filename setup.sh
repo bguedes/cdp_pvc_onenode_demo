@@ -221,6 +221,7 @@ pip install cm_client
 
 sed -i "s/YourHostname/${FQDN}/g" ./scripts/create_cluster.py
 sed -i "s/YourHostname/${FQDN}/g" $TEMPLATE
+sed -i "s/YourCDSWDomain/${FQDN}/g" $TEMPLATE
 
 #sed -i "s/YourHostname/localhost.localdomain/g" ./scripts/create_cluster.py
 #sed -i "s/YourHostname/localhost.localdomain/g" $TEMPLATE
