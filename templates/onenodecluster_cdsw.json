@@ -608,7 +608,7 @@
 								"configs": [
 										{
 												"name": "cdsw.docker.devices.config",
-												"value": "YourDockerDevice"
+												"value": "/dev/vdb"
 										}
 								],
 								"refName": "cdsw-CDSW_DOCKER-BASE",
@@ -638,7 +638,7 @@
 						},
 						{
 								"name": "cdsw.master.ip.config",
-								"value": "YourPrivateIP"
+								"value": "192.168.200.33"
 						}
 				],
 				"serviceType": "CDSW"
