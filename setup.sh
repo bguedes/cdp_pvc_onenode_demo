@@ -60,9 +60,9 @@ echo "-- Install CM and MariaDB"
 # CM 7
 cat - >/etc/yum.repos.d/cloudera-manager.repo <<EOF
 [cloudera-manager]
-name=Cloudera Manager 7.6.1
-baseurl=https://archive.cloudera.com/p/cm7/7.6.1/redhat7/yum/
-gpgkey=https://archive.cloudera.com/p/cm7/7.6.1/redhat7/yum/RPM-GPG-KEY-cloudera
+name=Cloudera Manager 7.7.1
+baseurl=https://archive.cloudera.com/p/cm7/7.7.1/redhat7/yum/
+gpgkey=https://archive.cloudera.com/p/cm7/7.7.1/redhat7/yum/RPM-GPG-KEY-cloudera
 username=$USERNAME
 password=$PASSWORD
 gpgcheck=1
