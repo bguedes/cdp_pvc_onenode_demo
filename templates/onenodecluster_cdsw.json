@@ -139,8 +139,8 @@
 	},
 	"products": [
 		{
-				"product": "CDSW",
-				"version": "1.10.0.p1.19362179"
+			"product": "CDSW",
+			"version": "1.10.0.p1.19362179"
 		},
 		{
 			"product": "CFM",
@@ -152,7 +152,7 @@
 		},
 		{
 			"product": "CDH",
-			"version": "7.1.7-1.cdh7.1.7.p1000.24102687"
+			"version": "CDH-7.1.8-1.cdh7.1.8.p0.30990532"
 		}
 	],
 	"repositories": [
