@@ -158,9 +158,9 @@ wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
 
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/CFM-2.1.4.0-53-el7.parcel -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/CFM-2.1.4.0-53-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/CFM-2.2.5.2-el7.parcel -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel//CFM-2.1.4.0-53-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel//manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
 
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/CDH-7.1.8-1.cdh7.1.8.p0.30990532-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/CDH-7.1.8-1.cdh7.1.8.p0.30990532-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
