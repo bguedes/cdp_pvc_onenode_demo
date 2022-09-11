@@ -162,10 +162,10 @@ wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/CFM-2.1.4.0-53-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/
 
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
-
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/CDH-7.1.8-1.cdh7.1.8.p0.30990532-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/CDH-7.1.8-1.cdh7.1.8.p0.30990532-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/KEYTRUSTEE_SERVER-7.1.8.0-1.keytrustee7.1.8.0.p0.30990532-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
 
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
