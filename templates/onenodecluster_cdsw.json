@@ -144,7 +144,7 @@
 		},
 		{
 			"product": "CFM",
-			"version": "2.1.4.0-53"
+			"version": "2.2.5.2"
 		},
 		{
 		    "product": "FLINK",
@@ -157,7 +157,7 @@
 	],
 	"repositories": [
 		"http://192.168.1.10/cloudera-repos/p/cdh7/7.1.8/parcels/",
-		"http://192.168.1.10/cloudera-repos/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/",
+		"http://192.168.1.10/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/",
 		"http://192.168.1.10/cloudera-repos/p/csa/1.7.0.0/parcels/",
 		"http://192.168.1.10/cloudera-repos/p/cdsw1/1.10.0/parcels/"
 	],
