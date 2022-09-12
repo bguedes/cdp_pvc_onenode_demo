@@ -159,7 +159,7 @@
 		"http://192.168.1.10/cloudera-repos/p/cdh7/7.1.8/parcels/",
 		"http://192.168.1.10/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/",
 		"http://192.168.1.10/cloudera-repos/p/csa/1.7.0.0/parcels/",
-		"http://192.168.1.10/cloudera-repos/p/cdsw1/1.10.0/parcels/"
+		"https://7aa5fd2f-c1a9-4ede-801e-fa7ffe205989:a9ed5dc980c4@archive.cloudera.com/p/cdsw1/1.10.0/parcels/"
 	],
 	"services": [{
 			"refName": "zookeeper",
