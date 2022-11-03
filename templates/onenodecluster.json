@@ -1,6 +1,6 @@
 {
-	"cdhVersion": "7.1.8",
-	"cmVersion": "7.7.1",
+	"cdhVersion": "7.1.7",
+	"cmVersion": "7.6.1",
 	"displayName": "OneNodeCluster",
 	"hostTemplates": [{
 		"cardinality": 1,
@@ -22,7 +22,7 @@
 			"kudu-KUDU_TSERVER-BASE",
 			"nifi-NIFI_NODE-BASE",
 			"nifiregistry-NIFI_REGISTRY_SERVER-BASE",
-			"schemaregistry-SCHEMA_REGISTRY_SERVER-BASE",
+                        "schemaregistry-SCHEMA_REGISTRY_SERVER-BASE",
 			"spark_on_yarn-GATEWAY-BASE",
 			"spark_on_yarn-SPARK_YARN_HISTORY_SERVER-BASE",
 			"streams_messaging_manager-STREAMS_MESSAGING_MANAGER_SERVER-BASE",
@@ -38,91 +38,93 @@
 	}],
 	"instantiator": {
 		"clusterName": "OneNodeCluster",
-		"hosts": [{
+		"hosts": [
+		{
 			"hostName": "YourHostname",
 			"hostTemplateRefName": "HostTemplate-0-from-YourHostname"
 		}],
 		"lenient": false,
-		"variables": [{
-				"name": "hive-hive_metastore_database_host",
-				"value": "YourHostname"
-			},
-			{
-				"name": "hive-hive_metastore_database_password",
-				"value": "cloudera"
-			},
-			{
-				"name": "hue-database_host",
-				"value": "YourHostname"
-			},
-			{
-				"name": "hue-database_password",
-				"value": "cloudera"
-			},
-			{
-				"name": "hue-database_type",
-				"value": "mysql"
-			},
-			{
-				"name": "kudu-KUDU_MASTER-BASE-fs_data_dirs",
-				"value": "/kudu/mas/dd"
-			},
-			{
-				"name": "kudu-KUDU_MASTER-BASE-fs_wal_dir",
-				"value": "/kudu/mas/wal"
-			},
-			{
-				"name": "kudu-KUDU_TSERVER-BASE-fs_data_dirs",
-				"value": "/kudu/tablet/dd"
-			},
+		"variables": [
+		     {
+			"name": "hive-hive_metastore_database_host",
+			"value": "YourHostname"
+		     },
+		     {
+			"name": "hive-hive_metastore_database_password",
+			"value": "cloudera"
+		     },
+		     {
+			"name": "hue-database_host",
+			"value": "YourHostname"
+		     },
+		     {
+			"name": "hue-database_password",
+			"value": "cloudera"
+		     },
+		     {
+			"name": "hue-database_type",
+			"value": "mysql"
+		     },
+		     {
+			"name": "kudu-KUDU_MASTER-BASE-fs_data_dirs",
+			"value": "/kudu/mas/dd"
+		     },
+		     {
+			"name": "kudu-KUDU_MASTER-BASE-fs_wal_dir",
+			"value": "/kudu/mas/wal"
+		     },
+		     {
+			"name": "kudu-KUDU_TSERVER-BASE-fs_data_dirs",
+			"value": "/kudu/tablet/dd"
+		     },
 			{
 				"name": "kudu-KUDU_TSERVER-BASE-fs_wal_dir",
 				"value": "/kudu/tablet/wal"
 			},
 			{
-				"name": "streams_messaging_manager-smm_database_host",
-				"value": "YourHostname"
+					"name": "streams_messaging_manager-smm_database_host",
+					"value": "YourHostname"
 			},
 			{
-				"name": "streams_messaging_manager-smm_database_password",
-				"value": "cloudera"
+					"name": "streams_messaging_manager-smm_database_password",
+					"value": "cloudera"
 			},
 			{
-				"name": "schemaregistry-database_host",
-				"value": "YourHostname"
+					"name": "schemaregistry-database_host",
+					"value": "YourHostname"
 			},
 			{
-				"name": "schemaregistry-database_name",
-				"value": "registry"
+					"name": "schemaregistry-database_name",
+					"value": "registry"
 			},
 			{
-				"name": "schemaregistry-database_password",
-				"value": "cloudera"
+					"name": "schemaregistry-database_password",
+					"value": "cloudera"
 			},
 			{
-				"name": "schemaregistry-database_user",
-				"value": "registry"
+					"name": "schemaregistry-database_user",
+					"value": "registry"
 			},
 			{
-				"name": "sql_stream_builder-MATERIALIZED_VIEW_ENGINE-BASE-ssb.mve.datasource.password",
-				"value": "cloudera"
-			},
-			{
-				"name": "sql_stream_builder-database_host",
-				"value": "127.0.0.1"
-			},
-			{
-				"name": "sql_stream_builder-database_password",
-				"value": "cloudera"
-			},
-			{
-				"name": "sql_stream_builder-database_schema",
-				"value": "ssb_admin"
-			},
-			{
-				"name": "sql_stream_builder-database_user",
-				"value": "ssb_admin"
-			}
+			     "name": "sql_stream_builder-MATERIALIZED_VIEW_ENGINE-BASE-ssb.mve.datasource.password",
+			     "value": "cloudera"
+			 },
+			 {
+			     "name": "sql_stream_builder-database_host",
+			     "value": "127.0.0.1"
+			 },
+			 {
+			     "name": "sql_stream_builder-database_password",
+			     "value": "cloudera"
+			 },
+			 {
+			     "name": "sql_stream_builder-database_schema",
+			     "value": "ssb_admin"
+			 },
+			 {
+			     "name": "sql_stream_builder-database_user",
+			     "value": "ssb_admin"
+			 }
 		]
 	},
 	"products": [{
@@ -130,8 +132,8 @@
 			"version": "2.1.4.0-53"
 		},
 		{
-			"product": "FLINK",
-			"version": "1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481"
+		    "product": "FLINK",
+		    "version": "1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481"
 		},
 		{
 			"product": "CDH",
@@ -417,149 +419,160 @@
 			"serviceType": "NIFIREGISTRY"
 		},
 		{
-			"refName": "streams_messaging_manager",
-			"roleConfigGroups": [{
-					"base": true,
-					"refName": "streams_messaging_manager-STREAMS_MESSAGING_MANAGER_SERVER-BASE",
-					"roleType": "STREAMS_MESSAGING_MANAGER_SERVER"
-				},
-				{
-					"base": true,
-					"refName": "streams_messaging_manager-STREAMS_MESSAGING_MANAGER_UI-BASE",
-					"roleType": "STREAMS_MESSAGING_MANAGER_UI"
-				}
-			],
-			"serviceConfigs": [{
-					"name": "smm_database_password",
-					"variable": "streams_messaging_manager-smm_database_password"
-				},
-				{
-					"name": "zookeeper_service",
-					"ref": "zookeeper"
-				},
-				{
-					"name": "kafka_service",
-					"ref": "kafka"
-				},
-				{
-					"name": "smm_database_host",
-					"variable": "streams_messaging_manager-smm_database_host"
-				}
-			],
-			"serviceType": "STREAMS_MESSAGING_MANAGER"
-		},
-		{
-			"refName": "schemaregistry",
-			"roleConfigGroups": [{
-				"base": true,
-				"refName": "schemaregistry-SCHEMA_REGISTRY_SERVER-BASE",
-				"roleType": "SCHEMA_REGISTRY_SERVER"
-			}],
-			"serviceConfigs": [{
-					"name": "hdfs_service",
-					"ref": "hdfs"
-				},
-				{
-					"name": "database_host",
-					"variable": "schemaregistry-database_host"
-				},
-				{
-					"name": "database_name",
-					"variable": "schemaregistry-database_name"
-				},
-				{
-					"name": "database_password",
-					"variable": "schemaregistry-database_password"
-				},
-				{
-					"name": "database_user",
-					"variable": "schemaregistry-database_user"
-				}
-			],
-			"serviceType": "SCHEMAREGISTRY"
-		},
-		{
-			"refName": "flink",
-			"roleConfigGroups": [{
-				"base": true,
-				"refName": "flink-FLINK_HISTORY_SERVER-BASE",
-				"roleType": "FLINK_HISTORY_SERVER"
-			}],
-			"serviceConfigs": [{
-					"name": "yarn_service",
-					"ref": "yarn"
-				},
-				{
-					"name": "zookeeper_service",
-					"ref": "zookeeper"
-				},
-				{
-					"name": "hive_service",
-					"ref": "hive"
-				},
-				{
-					"name": "hdfs_service",
-					"ref": "hdfs"
-				}
-			],
-			"serviceType": "FLINK"
-		},
-		{
-			"refName": "sql_stream_builder",
-			"roleConfigGroups": [{
-					"base": true,
-					"refName": "sql_stream_builder-STREAMING_SQL_ENGINE-BASE",
-					"roleType": "STREAMING_SQL_ENGINE"
-				},
-				{
-					"base": true,
-					"configs": [{
-							"name": "ssb.mve.datasource.url",
-							"value": "jdbc:postgresql://127.0.0.1:5432/ssb_mve"
+				"refName": "streams_messaging_manager",
+				"roleConfigGroups": [
+						{
+								"base": true,
+								"refName": "streams_messaging_manager-STREAMS_MESSAGING_MANAGER_SERVER-BASE",
+								"roleType": "STREAMS_MESSAGING_MANAGER_SERVER"
 						},
 						{
-							"name": "ssb.mve.datasource.username",
-							"value": "ssb_mve"
-						},
-						{
-							"name": "ssb.mve.datasource.password",
-							"variable": "sql_stream_builder-MATERIALIZED_VIEW_ENGINE-BASE-ssb.mve.datasource.password"
+								"base": true,
+								"refName": "streams_messaging_manager-STREAMS_MESSAGING_MANAGER_UI-BASE",
+								"roleType": "STREAMS_MESSAGING_MANAGER_UI"
 						}
-					],
-					"refName": "sql_stream_builder-MATERIALIZED_VIEW_ENGINE-BASE",
-					"roleType": "MATERIALIZED_VIEW_ENGINE"
-				}
-			],
-			"serviceConfigs": [{
-					"name": "hive_service",
-					"ref": "hive"
-				},
-				{
-					"name": "flink_service",
-					"ref": "flink"
-				},
-				{
-					"name": "database_password",
-					"variable": "sql_stream_builder-database_password"
-				},
-				{
-					"name": "database_schema",
-					"variable": "sql_stream_builder-database_schema"
-				},
-				{
-					"name": "database_user",
-					"variable": "sql_stream_builder-database_user"
-				},
-				{
-					"name": "database_host",
-					"variable": "sql_stream_builder-database_host"
-				},
-				{
-					"name": "kafka_service",
-					"ref": "kafka"
-				}
-			],
-			"serviceType": "SQL_STREAM_BUILDER"
+				],
+				"serviceConfigs": [
+						{
+								"name": "smm_database_password",
+								"variable": "streams_messaging_manager-smm_database_password"
+						},
+						{
+								"name": "zookeeper_service",
+								"ref": "zookeeper"
+						},
+						{
+								"name": "kafka_service",
+								"ref": "kafka"
+						},
+						{
+								"name": "smm_database_host",
+								"variable": "streams_messaging_manager-smm_database_host"
+						}
+				],
+				"serviceType": "STREAMS_MESSAGING_MANAGER"
+		},
+		{
+				"refName": "schemaregistry",
+				"roleConfigGroups": [
+						{
+								"base": true,
+								"refName": "schemaregistry-SCHEMA_REGISTRY_SERVER-BASE",
+								"roleType": "SCHEMA_REGISTRY_SERVER"
+						}
+				],
+				"serviceConfigs": [
+						{
+								"name": "hdfs_service",
+								"ref": "hdfs"
+						},
+						{
+								"name": "database_host",
+								"variable": "schemaregistry-database_host"
+						},
+						{
+								"name": "database_name",
+								"variable": "schemaregistry-database_name"
+						},
+						{
+								"name": "database_password",
+								"variable": "schemaregistry-database_password"
+						},
+						{
+								"name": "database_user",
+								"variable": "schemaregistry-database_user"
+						}
+				],
+				"serviceType": "SCHEMAREGISTRY"
+		},
+		{
+		    "refName": "flink",
+		    "roleConfigGroups": [
+		        {
+		            "base": true,
+		            "refName": "flink-FLINK_HISTORY_SERVER-BASE",
+		            "roleType": "FLINK_HISTORY_SERVER"
+		        }
+		    ],
+		    "serviceConfigs": [
+		        {
+		            "name": "yarn_service",
+		            "ref": "yarn"
+		        },
+		        {
+		            "name": "zookeeper_service",
+		            "ref": "zookeeper"
+		        },
+		        {
+		            "name": "hive_service",
+		            "ref": "hive"
+		        },
+		        {
+		            "name": "hdfs_service",
+		            "ref": "hdfs"
+		        }
+		    ],
+		    "serviceType": "FLINK"
+		},
+		{
+		    "refName": "sql_stream_builder",
+		    "roleConfigGroups": [
+		        {
+		            "base": true,
+		            "refName": "sql_stream_builder-STREAMING_SQL_ENGINE-BASE",
+		            "roleType": "STREAMING_SQL_ENGINE"
+		        },
+		        {
+		            "base": true,
+		            "configs": [
+		                {
+		                    "name": "ssb.mve.datasource.url",
+		                    "value": "jdbc:postgresql://127.0.0.1:5432/ssb_mve"
+		                },
+		                {
+		                    "name": "ssb.mve.datasource.username",
+		                    "value": "ssb_mve"
+		                },
+		                {
+		                    "name": "ssb.mve.datasource.password",
+		                    "variable": "sql_stream_builder-MATERIALIZED_VIEW_ENGINE-BASE-ssb.mve.datasource.password"
+		                }
+		            ],
+		            "refName": "sql_stream_builder-MATERIALIZED_VIEW_ENGINE-BASE",
+		            "roleType": "MATERIALIZED_VIEW_ENGINE"
+		        }
+		    ],
+		    "serviceConfigs": [
+		        {
+		            "name": "hive_service",
+		            "ref": "hive"
+		        },
+		        {
+		            "name": "flink_service",
+		            "ref": "flink"
+		        },
+		        {
+		            "name": "database_password",
+		            "variable": "sql_stream_builder-database_password"
+		        },
+		        {
+		            "name": "database_schema",
+		            "variable": "sql_stream_builder-database_schema"
+		        },
+		        {
+		            "name": "database_user",
+		            "variable": "sql_stream_builder-database_user"
+		        },
+		        {
+		            "name": "database_host",
+		            "variable": "sql_stream_builder-database_host"
+		        },
+		        {
+		            "name": "kafka_service",
+		            "ref": "kafka"
+		        }
+		    ],
+		    "serviceType": "SQL_STREAM_BUILDER"
 		}
 	]
 }
