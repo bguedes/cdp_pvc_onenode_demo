@@ -4,9 +4,6 @@ TEMPLATE=$3
 USERNAME=$1
 PASSWORD=$2
 
-export FQDNx="$(hostname)" # There will be an annoying space added to the end. Next command will clear it with xargs
-export FQDN=$(echo $FQDNx | xargs)
-
 echo "-- Configure user cloudera with passwordless and pem file"
 useradd cloudera -d /home/cloudera -p cloudera
 sudo usermod -aG wheel cloudera
@@ -55,21 +52,20 @@ sysctl -p
 
 sudo systemctl restart network.service
 
-echo "-- Install CM and MariaDB"
+echo "-- Add CM an yum repo"
 
 # CM 7
 cat - >/etc/yum.repos.d/cloudera-manager.repo <<EOF
 [cloudera-manager]
-name=Cloudera Manager 7.7.1
-baseurl=https://archive.cloudera.com/p/cm7/7.7.1/redhat7/yum/
-gpgkey=https://archive.cloudera.com/p/cm7/7.7.1/redhat7/yum/RPM-GPG-KEY-cloudera
+name=Cloudera Manager 7.6.1
+baseurl=https://archive.cloudera.com/p/cm7/7.6.1/redhat7/yum/
+gpgkey=https://archive.cloudera.com/p/cm7/7.6.1/redhat7/yum/RPM-GPG-KEY-cloudera
 username=$USERNAME
 password=$PASSWORD
 gpgcheck=1
 enabled=1
 autorefresh=0
 type=rpm-md
-
 [postgresql10]
 name=Postgresql 10
 baseurl=https://archive.cloudera.com/postgresql10/redhat7/
@@ -78,6 +74,8 @@ enabled=1
 gpgcheck=1
 module_hotfixes=true
 EOF
+
+echo "-- Add MariaDB an yum repo"
 
 # MariaDB 10.1
 cat - >/etc/yum.repos.d/MariaDB.repo <<EOF
@@ -159,13 +157,12 @@ wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
 
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/CFM-2.2.5.2-el7.parcel -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel//CFM-2.1.4.0-53-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel//manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/CFM-2.2.5.2-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
 
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/CDH-7.1.8-1.cdh7.1.8.p0.30990532-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/CDH-7.1.8-1.cdh7.1.8.p0.30990532-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/KEYTRUSTEE_SERVER-7.1.8.0-1.keytrustee7.1.8.0.p0.30990532-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.8.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.8/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
 
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
@@ -224,12 +221,9 @@ pip install certifi==2020.4.5.1
 echo "-- Now CM is started and the next step is to automate using the CM API"
 pip install cm_client
 
-sed -i "s/YourHostname/${FQDN}/g" ./scripts/create_cluster.py
-sed -i "s/YourHostname/${FQDN}/g" $TEMPLATE
-sed -i "s/YourCDSWDomain/${FQDN}/g" $TEMPLATE
-
-#sed -i "s/YourHostname/localhost.localdomain/g" ./scripts/create_cluster.py
-#sed -i "s/YourHostname/localhost.localdomain/g" $TEMPLATE
+sed -i "s/YourHostname/localhost.localdomain/g" ./scripts/create_cluster.py
+sed -i "s/YourHostname/localhost.localdomain/g" $TEMPLATE
+sed -i "s/YourCDSWDomain/localhost.localdomain/g" $TEMPLATE
 
 mkdir /data/dfs
 chmod -R 777 /data
