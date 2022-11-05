@@ -168,8 +168,8 @@ echo "-- Install local parcels repo"
 #wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
 #wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
 
-yum install httpd
-systemctl start httpd
+#yum install httpd
+#systemctl start httpd
 
 echo "-- Install CSDs for NIFI and NIFI REGISTRY"
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFI-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
