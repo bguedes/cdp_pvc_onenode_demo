@@ -153,10 +153,10 @@
 		}
 	],
 	"repositories": [
-                "https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/",
-                "https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.2/parcels/",
-                "https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/",
-                "https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.1000/redhat7/yum/tars/parcel/"
+                "https://USERNAME:PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/",
+                "https://USERNAME:PASSWORD@archive.cloudera.com/p/cdsw1/1.10.2/parcels/",
+                "https://USERNAME:PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/",
+                "https://USERNAME:PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.1000/redhat7/yum/tars/parcel/"
 	],
 	"services": [{
 			"refName": "zookeeper",
