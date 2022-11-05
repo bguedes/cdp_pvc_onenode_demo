@@ -152,21 +152,21 @@ CREATE DATABASE ssb_mve OWNER ssb_mve ENCODING 'UTF8';
 EOF
 
 echo "-- Install local parcels repo"
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/csa/1.7.0.0/parcels/
 
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/CFM-2.2.5.2-el7.parcel -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/CFM-2.2.5.2-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/CFM-2.2.5.2-el7.parcel -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/CFM-2.2.5.2-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/manifest.json -P /var/www/html/cloudera-repos/p/cfm2/2.2.5.2/redhat7/yum/tars/parcel/
 
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/CDH-7.1.7-1.cdh7.1.7.p1000.24102687-el7.parcel.sha1 -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdh7/7.1.7.1000/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdh7/7.1.7.1000/parcels
 
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/CDSW-1.10.0.p1.19362179-el7.parcel.sha -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.0/parcels/manifest.json -P /var/www/html/cloudera-repos/p/cdsw1/1.10.0/parcels
 
 yum install httpd
 systemctl start httpd
