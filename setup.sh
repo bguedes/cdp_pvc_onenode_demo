@@ -225,8 +225,8 @@ sed -i "s/YourHostname/localhost.localdomain/g" ./scripts/create_cluster.py
 sed -i "s/YourHostname/localhost.localdomain/g" $TEMPLATE
 sed -i "s/YourCDSWDomain/localhost.localdomain/g" $TEMPLATE
 
-#sed -i "s/USERNAME/$USERNAME/g" ./templates/onenodecluster_cdsw.json 
-#sed -i "s/PASSWORD/$PASSWORD/g" ./templates/onenodecluster_cdsw.json 
+sed -i "s/USERNAME/$USERNAME/g" ./templates/onenodecluster_cdsw.json 
+sed -i "s/PASSWORD/$PASSWORD/g" ./templates/onenodecluster_cdsw.json 
 
 mkdir /data/dfs
 chmod -R 777 /data
