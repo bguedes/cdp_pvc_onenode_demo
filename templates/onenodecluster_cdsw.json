@@ -359,7 +359,13 @@
 			"roleConfigGroups": [{
 				"base": true,
 				"refName": "kafka-KAFKA_BROKER-BASE",
-				"roleType": "KAFKA_BROKER"
+				"roleType": "KAFKA_BROKER",
+				"configs": [
+			            {
+			                "name": "broker_max_heap_size",
+					 "value": "512"
+				    }		    
+				]
 			}],
 			"serviceConfigs": [{
 					"name": "service_config_suppression_kafka_broker_count_validator",
