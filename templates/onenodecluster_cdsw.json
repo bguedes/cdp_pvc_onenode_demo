@@ -25,13 +25,6 @@
 			"kudu-KUDU_TSERVER-BASE",
 			"nifi-NIFI_NODE-BASE",
 			"nifiregistry-NIFI_REGISTRY_SERVER-BASE",
-			"ozone-GATEWAY-BASE",
-			"ozone-OZONE_DATANODE-BASE",
-			"ozone-OZONE_MANAGER-BASE",
-			"ozone-OZONE_PROMETHEUS-BASE",
-			"ozone-OZONE_RECON-BASE",
-			"ozone-S3_GATEWAY-BASE",
-			"ozone-STORAGE_CONTAINER_MANAGER-BASE",
 			"schemaregistry-SCHEMA_REGISTRY_SERVER-BASE",
 			"spark_on_yarn-GATEWAY-BASE",
 			"spark_on_yarn-SPARK_YARN_HISTORY_SERVER-BASE",
@@ -631,87 +624,6 @@
 				}
 			],
 			"serviceType": "CDSW"
-		},
-		{
-			"refName": "ozone",
-			"roleConfigGroups": [{
-					"base": true,
-					"refName": "ozone-GATEWAY-BASE",
-					"roleType": "GATEWAY"
-				},
-				{
-					"base": true,
-					"configs": [{
-						"name": "role_config_suppression_ozone_recon_max_heap_size",
-						"value": "true"
-					}],
-					"refName": "ozone-OZONE_RECON-BASE",
-					"roleType": "OZONE_RECON"
-				},
-				{
-					"base": true,
-					"configs": [{
-						"name": "role_config_suppression_scm_max_heap_size",
-						"value": "true"
-					}],
-					"refName": "ozone-STORAGE_CONTAINER_MANAGER-BASE",
-					"roleType": "STORAGE_CONTAINER_MANAGER"
-				},
-				{
-					"base": true,
-					"configs": [{
-						"name": "role_config_suppression_ozone_datanode_heap_size",
-						"value": "true"
-					}],
-					"refName": "ozone-OZONE_DATANODE-BASE",
-					"roleType": "OZONE_DATANODE"
-				},
-				{
-					"base": true,
-					"configs": [{
-						"name": "role_config_suppression_ozone_s3_gateway_max_heap_size",
-						"value": "true"
-					}],
-					"refName": "ozone-S3_GATEWAY-BASE",
-					"roleType": "S3_GATEWAY"
-				},
-				{
-					"base": true,
-					"configs": [{
-						"name": "role_config_suppression_om_max_heap_size",
-						"value": "true"
-					}],
-					"refName": "ozone-OZONE_MANAGER-BASE",
-					"roleType": "OZONE_MANAGER"
-				},
-				{
-					"base": true,
-					"refName": "ozone-OZONE_PROMETHEUS-BASE",
-					"roleType": "OZONE_PROMETHEUS"
-				}
-			],
-			"serviceConfigs": [{
-					"name": "ozone.replication",
-					"value": "1"
-				},
-				{
-					"name": "ozone.service.id",
-					"value": "ozone"
-				},
-				{
-					"name": "service_config_suppression_ozone_manager_count_validator",
-					"value": "true"
-				},
-				{
-					"name": "service_config_suppression_ozone_datanode_count_validator",
-					"value": "true"
-				},
-				{
-					"name": "hdfs_service",
-					"ref": "hdfs"
-				}
-			],
-			"serviceType": "OZONE"
 		}
 	]
 }
