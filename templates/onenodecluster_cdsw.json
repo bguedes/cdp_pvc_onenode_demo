@@ -592,7 +592,7 @@
 					"base": true,
 					"configs": [{
 						"name": "cdsw.docker.devices.config",
-						"value": "/dev/vdb"
+						"value": "/dev/sdb"
 					}],
 					"refName": "cdsw-CDSW_DOCKER-BASE",
 					"roleType": "CDSW_DOCKER"
