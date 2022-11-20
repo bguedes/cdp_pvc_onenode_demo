@@ -6,9 +6,6 @@
 		"cardinality": 1,
 		"refName": "HostTemplate-0-from-YourHostname",
 		"roleConfigGroupsRefNames": [
-			"cdsw-CDSW_APPLICATION-BASE",
-			"cdsw-CDSW_DOCKER-BASE",
-			"cdsw-CDSW_MASTER-BASE",
 			"hdfs-BALANCER-BASE",
 			"hdfs-DATANODE-BASE",
 			"hdfs-NAMENODE-BASE",
@@ -31,8 +28,6 @@
 			"streams_messaging_manager-STREAMS_MESSAGING_MANAGER_SERVER-BASE",
 			"streams_messaging_manager-STREAMS_MESSAGING_MANAGER_UI-BASE",
 			"flink-FLINK_HISTORY_SERVER-BASE",
-			"sql_stream_builder-MATERIALIZED_VIEW_ENGINE-BASE",
-			"sql_stream_builder-STREAMING_SQL_ENGINE-BASE",
 			"yarn-JOBHISTORY-BASE",
 			"yarn-NODEMANAGER-BASE",
 			"yarn-RESOURCEMANAGER-BASE",
