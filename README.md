@@ -1,8 +1,8 @@
 # Build one CDP Base node VM using Vagrant
 
-Fraud detection demo using CDP Private Cloud Base one node cluster installed using Vagrant
+This repository will show you how to build a one node CDP Base cluster in a virtualized environment using VirtualBox managed by Vagrant.
 
-This github repository will show you how to install a CDP Private Cloud Base using Cloudera Manager in a virtualized environment using VirtualBox managed by Vagrant
+After getting your CDP Base instance created, this document will describe how to add CDSW.
 
 ### Requirements
 
