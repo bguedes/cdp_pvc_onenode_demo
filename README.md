@@ -6,7 +6,7 @@ After getting your CDP Base instance created, this document will describe how to
 
 ### Requirements
 
-Your laptop needs at minimum 32GB RAM and at least 100GB disk space. <br />
+Your laptop needs at minimum 32GB RAM and at least 400GB disk space. <br />
 An Internet connection is also required, as this installation process will download various files required to perform the automated installation.<br />
 
 Please install :
