@@ -45,3 +45,14 @@ After that execute :
   vagrant up
 ```  
   
+### Power off the VM  
+  
+``` 
+  vagrant halt
+```    
+
+### Boot the VM  
+  
+``` 
+  vagrant reload
+```    
