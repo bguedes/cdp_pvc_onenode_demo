@@ -20,6 +20,8 @@ This project has been tested with on a Laptop Intel Core i7 with 16 cores and wi
   
 Please execute those following command lines :
 
+#### Linux 
+  
 ```
 wget https://raw.githubusercontent.com/bguedes/bootstrap.sh
 chmod +x bootstrap.sh
