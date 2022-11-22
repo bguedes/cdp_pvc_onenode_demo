@@ -5,6 +5,8 @@ vagrant plugin install vagrant-vbguest
 $VAGRANT_EXPERIMENTAL="disks"
 vagrant plugin install vagrant-disksize
 
+vagrant plugin install vagrant-hostmanager
+
 cd
 mkdir cdpvm
 cd cdpvm
