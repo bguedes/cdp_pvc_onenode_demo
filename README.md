@@ -11,7 +11,7 @@ An Internet connection is also required, as this installation process will downl
 
 Please install :
 
--[VirtualBox 6.1](https://www.virtualbox.org/)\
+-[VirtualBox 7.0](https://www.virtualbox.org/)\
 -[Vagrant 2.2.16](https://www.vagrantup.com/)
   
 This project has been tested with on a Laptop Intel Core i7 with 16 cores and with 32GB of memory<p>  
