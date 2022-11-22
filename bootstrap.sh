@@ -7,7 +7,6 @@ vagrant plugin install vagrant-disksize
 
 vagrant plugin install vagrant-hostmanager
 
-cd
 mkdir cdpvm
 cd cdpvm
 
