@@ -23,7 +23,7 @@ Please execute those following command lines :
 #### Linux 
   
 ```
-wget https://raw.githubusercontent.com/bguedes/bootstrap.sh
+wget https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/main/bootstrap.sh
 chmod +x bootstrap.sh
 ./bootstrap.sh
 
