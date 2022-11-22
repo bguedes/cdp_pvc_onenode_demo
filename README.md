@@ -22,12 +22,10 @@ This project has been tested with on a Laptop Intel Core i7 with 16 cores and wi
 Please execute those following command lines :
 
 ```
-cd  
-mkdir cdpvm
-cd cdpvm  
-  
-wget https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/master/vagrant/VMSetup.sh
-wget https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/master/vagrant/Vagrantfile
+wget https://raw.githubusercontent.com/bguedes/bootstrap.sh
+chmod +x bootstrap.sh
+./bootstrap.sh
+
 ```
   
 Modify on the downloaded Vagrantfile
