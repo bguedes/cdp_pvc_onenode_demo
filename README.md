@@ -11,7 +11,6 @@ An Internet connection is also required, as this installation process will downl
 
 Please install :
 
--[Linux Mint 20.3](https://linuxmint.com/download.php)\
 -[VirtualBox 6.1](https://www.virtualbox.org/)\
 -[Vagrant 2.2.16](https://www.vagrantup.com/)
   
