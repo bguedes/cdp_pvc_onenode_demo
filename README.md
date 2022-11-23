@@ -28,7 +28,14 @@ chmod +x bootstrap.sh
 ./bootstrap.sh
 
 ```
+#### Windows Powershell 
   
+```
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/main/windows_bootstrap.sh -UseBasicParsing -OutFile bootstrap.sh
+./bootstrap.sh
+
+``` 
+ 
 Modify on the downloaded Vagrantfile
 
 <change_me_for_username>
