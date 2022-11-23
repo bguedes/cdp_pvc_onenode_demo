@@ -49,7 +49,9 @@ Apply the username and password given for your Cloudera CDP PvC licence.
   config.vm.provision "shell", path: "VMSetup.sh", args: "<change_me_for_username> <change_me_for_password> templates/onenodecluster.json"
 ```
 
-After that execute :  
+#### Launch CDP VM installation
+
+Use Vagrant executing this command :  
   
 ``` 
   vagrant up
