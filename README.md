@@ -35,10 +35,12 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode
 ./bootstrap.sh
 
 ``` 
- 
+  
+#### License Credentials  
+  
 Modify on the downloaded Vagrantfile
 
-<change_me_for_username>
+<change_me_for_username><br>
 <change_me_for_password>
   
 Apply the username and password given for your Cloudera CDP PvC licence.
