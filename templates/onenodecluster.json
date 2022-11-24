@@ -241,7 +241,11 @@
 				{
 					"name": "hdfs_under_replicated_blocks_thresholds",
 					"value": "{\"warning\":\"never\",\"critical\":\"never\"}"
-				}
+				},
+                                {
+                                    "name": "service_config_suppression_nameservice_namenodes_heap_size_validator",
+                                    "value": "true"
+                                }
 			],
 			"serviceType": "HDFS"
 		},
