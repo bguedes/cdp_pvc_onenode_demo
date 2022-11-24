@@ -7,6 +7,8 @@ vagrant plugin install vagrant-disksize
 
 vagrant plugin install vagrant-hostmanager
 
+vagrant plugin install vagrant-scp
+
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/main/vagrant/VMSetup.sh -UseBasicParsing -OutFile VMSetup.sh
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/main/vagrant/Vagrantfile -UseBasicParsing -OutFile Vagrantfile
 
