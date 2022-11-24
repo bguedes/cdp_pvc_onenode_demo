@@ -68,3 +68,21 @@ Use Vagrant executing this command :
 ``` 
   vagrant reload
 ```    
+
+### Copy files
+
+#### From local to VM
+
+For example from current local folder to VM path /home/vagrant
+
+``` 
+    vagrant scp <local_file_name> cdp-base:/home/vagrant/<remote_file_name> 
+``` 
+
+#### From VM to local
+
+For example from VM path /home/vagrant to current local folder
+
+``` 
+    vagrant scp cdp-base:/home/vagrant/<remote_file_name> <local_file_name>
+```  
