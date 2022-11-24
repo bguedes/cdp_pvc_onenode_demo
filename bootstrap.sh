@@ -7,6 +7,8 @@ vagrant plugin install vagrant-disksize
 
 vagrant plugin install vagrant-hostmanager
 
+vagrant plugin install vagrant-scp
+
 wget https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/main/vagrant/VMSetup.sh
 wget https://raw.githubusercontent.com/bguedes/cdp_pvc_onenode_demo/main/vagrant/Vagrantfile
 
