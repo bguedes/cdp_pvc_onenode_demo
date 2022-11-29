@@ -80,6 +80,6 @@ cd cdp_pvc_onenode_demo
 chmod 777 setup.sh
 sudo ./setup.sh $1 $2 $3
 
-sudo reboot
+#sudo reboot
 
 exit 0
