@@ -143,7 +143,7 @@
 	],
 	"repositories": [
             "https://archive.cloudera.com/cdh7/7.1.7.0/parcels/",
-	    "https://USERNAME:PASSWORD@archive.cloudera.com/p/csa/1.6.1.0/parcels/
+	    "https://USERNAME:PASSWORD@archive.cloudera.com/p/csa/1.6.1.0/parcels/",
             "https://USERNAME:PASSWORD@archive.cloudera.com/p/cdsw1/1.10.2/parcels/",
             "https://USERNAME:PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.1000/redhat7/yum/tars/parcel/"
 	],
