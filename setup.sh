@@ -157,8 +157,11 @@ wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cfm2/2.1.4.0/redhat7/yum/tars/parcel/NIFIREGISTRY-1.16.0.2.1.4.0-53.jar -P /opt/cloudera/csd/
 
 echo "-- Install CSDs for Flink and SSB"
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
-wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/SQL_STREAM_BUILDER-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/FLINK-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
+#wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/csa/1.7.0.0/csd/SQL_STREAM_BUILDER-1.14.0-csa1.7.0.0-cdh7.1.7.0-551-26280481.jar -P /opt/cloudera/csd/
+wget -P /opt/cloudera/csd/ https://d91f760d-4df7-4733-8fe3-3c8dc2505717:6739e12847bb@archive.cloudera.com/p/csa/1.6.1.0/csd/FLINK-1.14.0-csa1.6.1.0-cdh7.1.7.0-551-20897251.jar
+wget -P /opt/cloudera/csd/ https://d91f760d-4df7-4733-8fe3-3c8dc2505717:6739e12847bb@archive.cloudera.com/p/csa/1.6.1.0/csd/SQL_STREAM_BUILDER-1.14.0-csa1.6.1.0-cdh7.1.7.0-551-20897251.jar
+
 
 echo "-- Install CSDs for CDSW"
 wget --progress=bar:force https://$USERNAME:$PASSWORD@archive.cloudera.com/p/cdsw1/1.10.2/csd/CLOUDERA_DATA_SCIENCE_WORKBENCH-CDH6-1.10.2.jar -P /opt/cloudera/csd/
